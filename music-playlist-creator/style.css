@@ -2,5 +2,40 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
     background-color: #f8f8f8;
+}
+
+header{
+    background-color: gray;
+    padding: 10px;
+    z-index: -1;
+}
+
+footer{
+    background-color: gray;
+    /* position: absolute;  */
+    bottom: 0; 
+    height: 40px;
+    z-index: 0;
+    width: 100%;
+}
+
+.single-playlist{
+    padding: 10px;
+    margin: 30px;
+    /* height: 200px;
+    width: 120px; */
+    border: black 1px solid;
+}
+
+.playlist_img{
+    height: 300px;
+    width: 300px;
+    border: black 1px solid;
+}
+
+.playlist-cards{
+    display: flex;
+    flex-wrap: wrap;
 }
