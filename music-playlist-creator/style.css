@@ -3,39 +3,82 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #f8f8f8;
+    background-image: url(./assets/img/bodybg.gif);
+    background-size: cover;
+    /* animation: slowDown 5s linear infinite; */
+
 }
 
 header{
+    text-align: center;
     background-color: gray;
     padding: 10px;
-    z-index: -1;
 }
 
 footer{
     background-color: gray;
     /* position: absolute;  */
-    bottom: 0; 
+    bottom: 0;
     height: 40px;
     z-index: 0;
     width: 100%;
 }
 
+#playlist-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .single-playlist{
+    /* flex: 1 0 23%; */
+    background-color: aliceblue;
+    color: black;
     padding: 10px;
     margin: 30px;
-    /* height: 200px;
-    width: 120px; */
-    border: black 1px solid;
+    height: 400px;
+    width: 250px;
+    border: white 1px solid;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    transition: all 0.5s ease;
+}
+
+.single-playlist:hover {
+    transform: scale(1.05);
 }
 
 .playlist_img{
-    height: 300px;
-    width: 300px;
-    border: black 1px solid;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    /* border: black 1px solid; */
+}
+
+@media only screen and (max-width: 768px) {
+    .single-playlist {
+        flex: 1 0 48%; /* This will set the width of each playlist card to 48% on screens smaller than 768px */
+    }
 }
 
 .playlist-cards{
     display: flex;
     flex-wrap: wrap;
+}
+
+#likeButton {
+    color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#likeButton.liked {
+    color: #e74c3c;
+}
+
+#likeCount {
+    font-size: 18px;
 }
