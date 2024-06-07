@@ -25,6 +25,8 @@ function renderPlaylists(filterText = "") {
                     </div>
                 </div>
             `;
+
+
             playlistElement.classList.add("single-playlist");
             playlists.appendChild(playlistElement);
 
@@ -33,6 +35,7 @@ function renderPlaylists(filterText = "") {
                 modal.style.display = 'block';
             });
 
+            //liking a playlist
             const likeButton = playlistElement.querySelector(".likeButton");
             const likeCountSpan = playlistElement.querySelector(".likeCount");
             likeButton.addEventListener('click', (event) => {
@@ -41,6 +44,7 @@ function renderPlaylists(filterText = "") {
                 likeCountSpan.textContent = item.likeCount;
             });
 
+            //deleting a playlist
             const trashButton = playlistElement.querySelector(".fa-trash");
             trashButton.addEventListener('click', (event) => {
                 event.stopPropagation();
