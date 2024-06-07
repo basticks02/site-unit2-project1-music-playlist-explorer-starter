@@ -19,50 +19,32 @@ function renderPlaylists(filterText = ""){
                         <h3>${item['playlist_name']}</h3>
                         <p>${item['playlist_creator']}</p>
                         <div class="like-section">
-                            <i id="likeButton" class="fas fa-heart"></i>
-                            <span id="likeButton">${item['likeCount']}</span>
+                            <i class="likeButton fas fa-heart"></i>
+                            <span class="likeCount">${item['likeCount']}</span>
                         </div>
                     </div>
         `
         playlistElement.classList.add("single-playlist");
         playlists.appendChild(playlistElement);
+
         playlistElement.addEventListener('click', () => {
             renderModal(item);
                 modal.style.display = 'block';
+        })
+
+        const likeButton = playlistElement.querySelector(".likeButton");
+        const likeCountSpan = playlistElement.querySelector(".likeCount");
+        likeButton.addEventListener('click', (event) =>{
+            event.stopPropagation();
+            item.likeCount += likeButton.classList.toggle('liked') ? 1 : -1;
+            likeCountSpan.textContent = item.likeCount;
         })
 
 
     })
 
 }
-// playlists.innerHTML = "";
-// eachPlaylistData["playlists"]
-// .filter(item => item['playlist_name'].toLowerCase().includes(filterText.toLowerCase()) || item['playlist_creator'].toLowerCase().includes(filterText.toLowerCase()))
-// .forEach((item) => {
-//     let playlistElement = document.createElement("li")
 
-//     playlistElement.innerHTML =  `
-//                 <div>
-//                     <img src="${item['playlist_art']}" class="playlist_img" >
-//                 </div>
-//                 <div>
-//                     <h3>${item['playlist_name']}</h3>
-//                     <p>${item['playlist_creator']}</p>
-//                     <div class="like-section">
-//                         <i id="likeButton" class="fas fa-heart"></i>
-//                         <span id="likeButton">${item['likeCount']}</span>
-//                     </div>
-//                 </div>
-//     `
-//     playlistElement.classList.add("single-playlist");
-//     playlists.appendChild(playlistElement);
-//     playlistElement.addEventListener('click', () => {
-//         renderModal(item);
-//             modal.style.display = 'block';
-//     })
-
-
-// })
 
 searching.addEventListener('input', (event) => {
     renderPlaylists(event.target.value);
@@ -112,4 +94,17 @@ function renderModal(item) {
         `;
         modalEachSongContainer.appendChild(songElement);
     });
+
+    const shuffle = document.getElementById('shuffle-button')
+    shuffle.addEventListener('click', () => {
+        shuffleSongs(item.songs);
+        renderModal(item)
+    })
+}
+
+function shuffleSongs(songs){
+    for(let i = songs.length-1; i>0; i--){
+        const j = Math.floor(Math.random()*(i+1));
+        [songs[i], songs[j]] = [songs[j], songs[i]];
+    }
 }
