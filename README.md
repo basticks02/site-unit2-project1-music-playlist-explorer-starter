@@ -43,7 +43,7 @@ Estimated time spent: **40** hours spent in total
 - [x] **Search Functionality**
   - [x] Implement a search bar that allows users to filter playlists by name or creator.
 
-- [ ] **Sorting Options**
+- [x] **Sorting Options**
   - [x] Implement a dropdown or button options that allow users to sort the playlist by name, number of likes, or date added.
 
 ### Walkthrough Video
