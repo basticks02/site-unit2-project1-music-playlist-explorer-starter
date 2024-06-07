@@ -21,6 +21,7 @@ function renderPlaylists(filterText = "") {
                     <div class="like-section">
                         <i class="likeButton fas fa-heart"></i>
                         <span class="likeCount">${item['likeCount']}</span>
+                        <i class="fa-solid fa-trash"></i>
                     </div>
                 </div>
             `;
@@ -39,6 +40,12 @@ function renderPlaylists(filterText = "") {
                 item.likeCount += likeButton.classList.toggle('liked') ? 1 : -1;
                 likeCountSpan.textContent = item.likeCount;
             });
+
+            const trashButton = playlistElement.querySelector(".fa-trash");
+            trashButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                playlistElement.remove();
+            })
         });
 }
 
