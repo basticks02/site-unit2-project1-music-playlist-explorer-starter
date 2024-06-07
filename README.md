@@ -4,7 +4,7 @@ Submitted by: **Ekom-obong(Praise) Ekanem**
 
 Estimated time spent: **40** hours spent in total
 
-Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Music Playlist Explorer Deployed Site] https://www.loom.com/share/d31371a99b5045abb689b4ecaf796af7
 
 ### Application Features
 
