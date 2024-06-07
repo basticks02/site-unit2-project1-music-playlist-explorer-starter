@@ -4,8 +4,6 @@ Submitted by: **Ekom-obong(Praise) Ekanem**
 
 Estimated time spent: **40** hours spent in total
 
-Deployed Application (optional): [Music Playlist Explorer Deployed Site] https://www.loom.com/share/d31371a99b5045abb689b4ecaf796af7
-
 ### Application Features
 
 #### CORE FEATURES
@@ -49,6 +47,8 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site] https:/
   - [x] Implement a dropdown or button options that allow users to sort the playlist by name, number of likes, or date added.
 
 ### Walkthrough Video
+
+https://www.loom.com/share/d31371a99b5045abb689b4ecaf796af7
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
