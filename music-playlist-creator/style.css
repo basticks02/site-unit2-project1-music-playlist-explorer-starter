@@ -49,17 +49,18 @@ footer{
     justify-content: left;
 }
 
-.single-playlist{
+.single-playlist
+{
     /* flex: 1 0 23%; */
-    background-color: aliceblue;
+    background-color: rgb(166, 162, 162);
     color: black;
     padding: 10px;
     margin: 30px;
     height: 400px;
     width: 250px;
-    border: white 1px solid;
+    /* border: white 1px solid; */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
     transition: all 0.5s ease;
     list-style-type: none;
     /* flex-basis: 20%; */
@@ -130,7 +131,7 @@ footer{
  } */
 
  .modal-content {
-    background-color: #fefefe;
+    background-color: rgb(166, 162, 162);
     margin: 13% auto; /*15% from the top and centered*/
     padding: 20px;
     width: 60%; /*Could be more or less, depending on screen size*/
@@ -147,7 +148,7 @@ footer{
  } */
 
  .close {
-    color: #aaa;
+    color: #f2eded;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -176,6 +177,7 @@ footer{
 }
 
 .modal-each-song{
+    background-color: rgb(154, 146, 146);
     display: flex;
     /* border: solid black 1px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -248,10 +250,11 @@ footer{
 }
 
 .playlist-modal {
-    background-color: #fefefe;
+    background-color: rgb(203, 197, 197);
     margin: 13% auto; /*15% from the top and centered*/
     padding: 20px;
-    width: 80%; /*Could be more or less, depending on screen size*/
+    height: 600px;
+    width: 60%; /*Could be more or less, depending on screen size*/
     /* 3height: 70px auto; */
     /* border: 1px solid #888; */
     border-radius: 10px;
@@ -265,28 +268,51 @@ footer{
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
  }
 
  .mainpart{
     width: 50%;
  }
  .songspart{
+    display: flex;
+    flex-direction: column;
+
     width: 50%;
+    justify-content: center;
+    align-items: center;
  }
 
  .eachsong{
+    background-color: rgb(166, 162, 162);
     border-radius: 5px;
     height: 60px;
     width: 95%;
     /* border: black 1px solid; */
     box-shadow: 0 2px 4px rgba(0.5, 0, 0, 0.5);
     margin-left: 20px;
-    margin-top: 3px;
+    margin-top: 10px;
     text-align: center;
     /* align-items: center; */
     /* justify-content: center; */
+    transition: all 0.5s ease;
  }
 
- #songname{
-    padding: 20px;
+ .eachsong:hover,
+ .mainpartimg:hover{
+    transform: scale(1.02);
  }
+
+ .fa-house{
+    margin-left: 20px;
+    transform: scale(1.5);
+ }
+
+ .fa-rotate-right{
+    margin-right: 20px;
+    transform: scale(1.5);
+ }
+
+ /* #songname{
+    padding: 20px;
+ } */
